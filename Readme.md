@@ -1,7 +1,7 @@
 # Личный проект «Седона»
 
 * Студент: [Евгений Капутин](https://up.htmlacademy.ru/htmlcss/22/user/780933).
-* Наставник: `Неизвестно`.
+* Наставник: [Илья Туров](https://htmlacademy.ru/profile/turov).
 
 ---
 
