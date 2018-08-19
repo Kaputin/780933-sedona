@@ -10,7 +10,7 @@
   <header class="main-header">
     <nav class="main-navigation">
       <a class="main-header-logo" href="index.html">
-        <img src="img/index-logo.svg" width="123" height="123" alt="Логотип «City of Sedona»">
+        <img src="img/logo-sedona.svg" width="140" height="72" alt="Логотип «City of Sedona»">
       </a>
       <ul class="navigation-list">
         <li class="navigation-item">
@@ -32,7 +32,63 @@
   <main class="container">
     <h1 class="visually-hidden">Отели</h1>
     <div class="filters">
-      <!-- Здесь будет форма -->
+      <form class="filter" method="get" action="https://echo.index.ru">
+        <fieldset>
+          <legend class="filter-legend">Инфраструктура:</legend>
+          <ul class="filter-list">
+            <li class="filter-option">
+              <input class="visually-hidden filter-input filter-input-checkbox" type="checkbox" name="pool" id="filter-pool" checked>
+              <label for="filter-pool">Бассейн</label>
+            </li>
+            <li class="filter-option">
+              <input class="visually-hidden filter-input filter-input-checkbox" type="checkbox" name="parking " id="filter-parking">
+              <label for="filter-parking">Парковка</label>
+            </li>
+            <li class="filter-option">
+              <input class="visually-hidden filter-input filter-input-checkbox" type="checkbox" name="Wi-fi" id="filter-Wi-fi">
+              <label for="filter-Wi-fi">Wi-fi</label>
+            </li>
+          </ul>
+        </fieldset>
+        <fieldset>
+          <legend class="filter-legend">Тип жилья:</legend>
+          <ul class="filter-list">
+            <li class="filter-option">
+              <input class="visually-hidden filter-input  -checkbox" type="checkbox" name="hotel" id="filter-hotel" checked>
+              <label for="filter-hotel">Гостиница</label>
+            </li>
+            <li class="filter-option">
+              <input class="visually-hidden filter-input filter-input-checkbox" type="checkbox" name="motel " id="filter-motel" checked>
+              <label for="filter-motel">Мотель</label>
+            </li>
+            <li class="filter-option">
+              <input class="visually-hidden filter-input filter-input-checkbox" type="checkbox" name="Apartments" id="filter-Apartments"
+                checked>
+              <label for="filter-Apartments">Аппартаменты</label>
+            </li>
+          </ul>
+        </fieldset>
+        <fieldset>
+          <legend class="filter-legend">Стоимость в сутки (Р):</legend>
+          <div class="filter-output-area">
+            <span class="output-area-min">От
+              <output class="cost-min-value"> 0</output>
+            </span>
+            <span output-area-max>До
+              <output class="cost-max-value"> 3000</output>
+            </span>
+          </div>
+          <div class="filter-cost-range">
+            <label class="visually-hidden filter-input filter-input-cost" for="cost-min">Минимальная стоимость</label>
+            <input id="cost-min" type="range" min="0" max="4000" value="0">
+            <label class="visually-hidden filter-input filter-input-cost" for="cost-max">Максимальная стоимость</label>
+            <input id="cost-max" type="range" min="0" max="4000" value="3000">
+          </div>
+          <div class="filter-search-btm">
+            <button class="filter-search-hotel" type="submit">Показать</button>
+          </div>
+        </fieldset>
+      </form>
     </div>
     <div class="search-result">
       <b>Найдено:
@@ -68,7 +124,7 @@
       <h2 class="visually-hidden">Список отелей</h2>
       <ul class="catalog-list">
         <li class="catalog-item">
-          <img src="img/Hotel-1.jpg" width="123" height="123" alt="Amara resort & Spa">
+          <img src="img/Hotel-1.jpg" width="135" height="90" alt="Amara resort & Spa">
           <div>
             <h3 class="catalog-item-title">
               <a href="catalog-item.html">Amara resort & Spa</a>
@@ -96,7 +152,7 @@
         </li>
 
         <li class="catalog-item">
-          <img src="img/Hotel-2.jpg" width="123" height="123" alt="Desert Qualin Inn">
+          <img src="img/Hotel-2.jpg" width="135" height="90" alt="Desert Qualin Inn">
           <div>
             <h3 class="catalog-item-title">
               <a href="catalog-item.html">Desert Qualin Inn</a>
@@ -123,7 +179,7 @@
         </li>
 
         <li class="catalog-item">
-          <img src="img/Hotel-3.jpg" width="123" height="123" alt="Villas at Poco Diablo">
+          <img src="img/Hotel-3.jpg" width="135" height="90" alt="Villas at Poco Diablo">
           <div>
             <h3 class="catalog-item-title">
               <a href="catalog-item.html">Villas at Poco Diablo</a>
@@ -166,7 +222,7 @@
     </ul>
     <div class="footer-copyright">
       <b>Website by</b>
-      <a class="htmlacademy-logo" href="https://htmlacademy.ru">
+      <a class="htmlacademy-logo" href="https://htmlacademy.ru/intensive/htmlcss">
         <img src="#" width="123" height="123" alt="Логотип htmlacademy">
       </a>
     </div>

@@ -10,7 +10,7 @@
   <header class="main-header">
     <nav class="main-navigation">
       <a class="main-header-logo">
-        <img src="img/index-logo.svg" width="123" height="123" alt="Логотип «City of Sedona»">
+        <img src="img/logo-sedona.svg" width="140" height="72" alt="Логотип «City of Sedona»">
       </a>
       <ul class="navigation-list">
         <li class="navigation-item">
@@ -31,7 +31,7 @@
 
   <main class="container">
     <div class="intro">
-      <img src="img/maid-sedona.svg" width="123" height="123" alt="Welcome Sedona">
+      <img src="img/intro-welcome.svg" width="459" height="353" alt="Welcome Sedona">
     </div>
 
     <div class="promo">
@@ -48,7 +48,7 @@
             <span class="reasons-item-number">-1-</span>
             <p class="reasons-item-desc">Седона - не аттракцион для туристов, там течёт своя жизнь</p>
           </div>
-          <img src="img/city-sedona.svg" width="123" height="123" alt="Welcome Sedona">
+          <img src="img/city-sedona.jpg" width="800" height="401" alt="City Sedona">
           <ul class="features-list">
             <li class="features-item">
               <h4 class="features-item-title">Жильё</h4>
@@ -64,7 +64,7 @@
           </ul>
           </li>
           <li class="reasons-item">
-            <img src="img/city-sedona.svg" width="123" height="123" alt="Welcome Sedona">
+            <img src="img/bridge-sedona.jpg" width="800" height="400" alt="Bridge Sedona">
             <div class="reasons-item-block">
               <h3 class="reasons-item-title">Там есть мост дьявола</h3>
               <span class="reasons-item-number">-2-</span>
@@ -99,11 +99,31 @@
       <b>Заинтересовались?</b>
       <p class="appointment-info">Укажите предполагаемые даты поездки, и мы покажем вам лучшие предложения гостиниц в Cедоне</p>
       <button class="search-form-btn" type="button">Поиск гостиницы в Седоне</button>
-      <!-- Здесь будет форма -->
+      <form class="appointment-form" action="https://echo.index.ru" method="post">
+        <p class="appointment-item">
+          <label for="appointment-arrival-date">Дата заезда</label>
+          <input id="appointment-arrival-date" type="date" name="arrival-date" value="2017-04-24">
+        </p>
+        <p class="appointment-item">
+          <label for="appointment-Departure-date">Дата заезда</label>
+          <input id="appointment-Departure-date" type="date" name="Departure-date" value="2017-07-04">
+        </p>
+        <p class="appointment-item">
+          <label for="number-adults">Взрослые</label>
+          <input id="number-adults" type="number" name="number-adults" value="2" min="0">
+        </p>
+        <p class="appointment-item">
+          <label for="number-children">Дети</label>
+          <input id="number-children" type="number" name="number-children" value="0" min="0">
+        </p>
+        <button class="search-hotel" type="submit">Найти</button>
+      </form>
     </div>
     <section class="map">
       <h5 class="visually-hidden">Карта</h5>
-      <!-- карта -->
+      <p>
+        <img src="img/map.jpg" width="1200" height="594" alt="Карта расположения Седоны">
+      </p>
     </section>
   </main>
 
@@ -122,7 +142,7 @@
     </ul>
     <div class="footer-copyright">
       <b>Website by</b>
-      <a class="htmlacademy-logo" href="https://htmlacademy.ru">
+      <a class="htmlacademy-logo" href="https://htmlacademy.ru/intensive/htmlcss">
         <img src="#" width="123" height="123" alt="Логотип htmlacademy">
       </a>
     </div>
