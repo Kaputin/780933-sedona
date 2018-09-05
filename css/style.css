@@ -372,6 +372,8 @@ html {
 }
 
 .appointment .search-form-btn {
+  position: relative;
+  z-index: 3;
   display: inline-block;
   margin: 0px;
   padding: 31px 140px;
@@ -385,6 +387,71 @@ html {
   border: none;
 }
 
+@keyframes lift-down {
+  from {
+    transform: translateY(-86px) translateX(-50%);
+  }
+
+  10% {
+    transform: translateY(-76px) translateX(-50%);
+  }
+
+  20% {
+    transform: translateY(-66px) translateX(-50%);
+  }
+
+  30% {
+    transform: translateY(-56px) translateX(-50%);
+  }
+
+  40% {
+    transform: translateY(-46px) translateX(-50%);
+  }
+
+  50% {
+    transform: translateY(-36px) translateX(-50%);
+  }
+
+  60% {
+    transform: translateY(-26px) translateX(-50%);
+  }
+
+  70% {
+    transform: translateY(-16px) translateX(-50%);
+  }
+
+  80% {
+    transform: translateY(-6px) translateX(-50%);
+  }
+
+  to {
+    transform: translateY(0) translateX(-50%);
+  }
+}
+
+@keyframes shake {
+
+  0%,
+  100% {
+    transform: translateX(-50%);
+  }
+
+  10%,
+  30%,
+  50%,
+  70%,
+  90% {
+    transform: translateX(-55%);
+  }
+
+  20%,
+  40%,
+  60%,
+  80% {
+    transform: translateX(-45%);
+  }
+}
+
 .appointment-form {
   font: inherit;
   margin: 0;
@@ -395,7 +462,7 @@ html {
   width: 568px;
   display: -webkit-box;
   display: -ms-flexbox;
-  display: flex;
+  display: none;
   position: absolute;
   -webkit-box-pack: justify;
   -ms-flex-pack: justify;
@@ -404,7 +471,7 @@ html {
   -webkit-transform: translateX(-50%);
   -ms-transform: translateX(-50%);
   transform: translateX(-50%);
-  z-index: 0;
+  z-index: 2;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
   -ms-flex-direction: row;
@@ -417,7 +484,13 @@ html {
 }
 
 .appointment-form-show {
-  z-index: 2;
+  display: flex;
+  animation: lift-down 0.6s;
+}
+
+.modal-error {
+  animation-name: shake;
+  animation-duration: 0.6s;
 }
 
 .appointment .search-form-btn:hover {
@@ -608,6 +681,7 @@ html {
 }
 
 .image-block {
+  display: block;
   padding: 0;
   margin: 0;
   background-color: #d9e4c1;
@@ -617,6 +691,12 @@ html {
   display: block;
   position: relative;
   margin: 0px;
+}
+
+.map iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
 }
 
 /*----------------------------------Фильтр-----------------------------------*/
@@ -775,7 +855,6 @@ html {
   padding: 0px;
 }
 
-/*------------------------------------------------------------------------------------------------------*/
 .range {
   display: block;
   width: 318px;
@@ -905,7 +984,6 @@ html {
   border: 0;
 }
 
-/*-----------------------------------------------------------------------------------------------------------------*/
 .catalog {
   margin: 0px;
   padding: 0px;
