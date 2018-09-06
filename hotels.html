@@ -102,20 +102,18 @@
         <fieldset class="filter-group range">
           <legend class="range-title">Стоимость в сутки (<span aria-label="в рублях">р</span>):</legend>
           <div class="range-controls">
-            <label class="range-label range-label-min" for="price-min">
+            <label class="range-label range-label-min" for="min-price">
               от
-              <span class="range-output" aria-hidden="true"></span>
+              <input class="range-output" id="min-price" name="min-price" type="text" aria-hidden="true" value="0">
             </label>
-            <input class="range-input visually-hidden" id="price-min" type="range" name="price" min="0" max="5000"
-                   step="100" value="0">
+            <input class="range-input visually-hidden" type="range">
             <label class="range-lever range-lever-min" for="price-min" aria-hidden="true"></label>
 
-            <label class="range-label range-label-max" for="price-max">
+            <label class="range-label range-label-max" for="max-price">
               до
-              <span class="range-output" aria-hidden="true"></span>
+              <input class="range-output" id="max-price" name="max-price" type="text" aria-hidden="true" value="3000">
             </label>
-            <input class="range-input visually-hidden" id="price-max" type="range" name="price" min="0" max="5000"
-                   step="100" value="3000">
+            <input class="range-input visually-hidden" type="range">
             <label class="range-lever range-lever-max" for="price-max" aria-hidden="true"></label>
             <div class="range-scale">
               <div class="range-bar"></div>
@@ -274,6 +272,5 @@
     </div>
   </footer>
 </div>
-<script src="js/range.min.js"></script>
 </body>
 </html>

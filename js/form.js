@@ -1,31 +1,34 @@
-'use strict';
+var link = document.querySelector(".search-form-btn");
+var form = document.querySelector(".appointment-form");
+var arrival = document.querySelector("[name=arrival-date]");
+var departure = document.querySelector("[name=Departure-date]");
+var search = document.querySelector(".search-hotel");
 
-(function () {
+form.classList.remove("appointment-form-show");
 
-  var link = document.querySelector('.search-form-btn');
-  var popup = document.querySelector('.appointment-form');
-  var arrival = popup.querySelector('[name=arrival-date]');
-  var Departure = popup.querySelector('[name=Departure-date]');
+link.addEventListener("click", function (event) {
+  event.preventDefault();
+  form.classList.toggle("appointment-form-show");
+  arrival.focus();
+});
 
-  popup.classList.remove('appointment-form-show');
+search.addEventListener("click", function (event) {
+  form.classList.remove("modal-error");
+  form.offsetWidth = form.offsetWidth;
+  if (!(arrival.value && departure.value)) {
+    event.preventDefault();
+    form.classList.add("modal-error");
+  }
+});
 
-  link.addEventListener('click', function (evt) {
-    evt.preventDefault();
-    popup.classList.toggle('appointment-form-show');
-  });
-
-
-  popup.addEventListener('submit', function (evt) {
-    if (!arrival.value || !Departure.value) {
-      evt.preventDefault();
-      popup.classList.remove('modal-error');
-      popup.offsetWidth = popup.offsetWidth;
-      popup.classList.add('modal-error');
-    } else {
-      if (isStorageSupport) {
-        localStorage.setItem('arrival', arrival.value);
-      }
+window.addEventListener("keydown", function (event) {
+  if (event.keyCode == 27) {
+    if (form.classList.contains("appointment-form-show")) {
+      form.classList.remove("appointment-form-show");
     }
-  });
+  }
+});
 
-})();
+search.onClick = function (evt) {
+
+}
